@@ -20,7 +20,12 @@ export default function Hero() {
     canvas.height = window.innerHeight;
 
     const particles: {
-      x: number; y: number; r: number; speed: number; opacity: number; dx: number;
+      x: number;
+      y: number;
+      r: number;
+      speed: number;
+      opacity: number;
+      dx: number;
     }[] = [];
 
     for (let i = 0; i < 60; i++) {
@@ -81,7 +86,7 @@ export default function Hero() {
         <div className={styles.left}>
           <div className={styles.badge}>
             <span className={styles.badgeDot} />
-            Официальный старт деятельности · 2025
+            Официальный старт деятельности · 2026
           </div>
 
           <h1 className={styles.title}>
@@ -94,36 +99,71 @@ export default function Hero() {
 
           <p className={styles.desc}>
             МУП «Экотехпром» — региональный оператор по обращению с твёрдыми
-            коммунальными отходами на территории Кабардино-Балкарской Республики.
-            Обеспечиваем экологическую стабильность и чистоту каждого района.
+            коммунальными отходами на территории Кабардино-Балкарской
+            Республики. Обеспечиваем экологическую стабильность и чистоту
+            каждого района.
           </p>
 
           <div className={styles.certBanner}>
             <div className={styles.certIcon}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M9 12l2 2 4-4" stroke="#2ecc71" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21.02 7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#2ecc71" strokeWidth="1.5" strokeLinejoin="round"/>
+                <path
+                  d="M9 12l2 2 4-4"
+                  stroke="#2ecc71"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21.02 7 14.14 2 9.27l6.91-1.01L12 2z"
+                  stroke="#2ecc71"
+                  strokeWidth="1.5"
+                  strokeLinejoin="round"
+                />
               </svg>
             </div>
             <div>
-              <p className={styles.certTitle}>Приказ №152 · Без конкурсного отбора</p>
+              <p className={styles.certTitle}>
+                Приказ №152 · Без конкурсного отбора
+              </p>
               <p className={styles.certText}>
-                О присвоении МУП «Экотехпром» статуса регионального оператора КБР
+                О присвоении МУП «Экотехпром» статуса регионального оператора
+                КБР
               </p>
             </div>
           </div>
 
           <div className={styles.actions}>
-            <button className="btn-primary" onClick={() => scrollTo("#contact")}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M12 5v14M5 12l7 7 7-7"/>
+            <button
+              className="btn-primary"
+              onClick={() => scrollTo("#contact")}
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+              >
+                <path d="M12 5v14M5 12l7 7 7-7" />
               </svg>
               Подать заявку
             </button>
-            <button className="btn-outline" onClick={() => scrollTo("#tariffs")}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <path d="M9 9h6M9 12h6M9 15h4"/>
+            <button
+              className="btn-outline"
+              onClick={() => scrollTo("#tariffs")}
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M9 9h6M9 12h6M9 15h4" />
               </svg>
               Посмотреть тарифы
             </button>
@@ -135,7 +175,11 @@ export default function Hero() {
           <div className={styles.statsGrid}>
             {[
               { value: "10+", label: "районов обслуживания", icon: "📍" },
-              { value: "500к+", label: "жителей в зоне ответственности", icon: "👥" },
+              {
+                value: "500к+",
+                label: "жителей в зоне ответственности",
+                icon: "👥",
+              },
               { value: "24/7", label: "диспетчерская служба", icon: "🕐" },
               { value: "100%", label: "соответствие нормативам", icon: "✅" },
             ].map((s, i) => (
@@ -157,7 +201,10 @@ export default function Hero() {
       {/* Bottom wave */}
       <div className={styles.wave}>
         <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
-          <path d="M0,40 C360,80 720,0 1440,40 L1440,80 L0,80 Z" fill="#0a1628"/>
+          <path
+            d="M0,40 C360,80 720,0 1440,40 L1440,80 L0,80 Z"
+            fill="#0a1628"
+          />
         </svg>
       </div>
     </section>
