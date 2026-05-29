@@ -92,9 +92,8 @@ export default function Hero() {
           <h1 className={styles.title}>
             Чистота — наша
             <br />
-            <span className={styles.titleGradient}>ответственность</span>
+            <span className={styles.titleGradient}>ответственность.</span>
             <br />
-            перед КБР
           </h1>
 
           <p className={styles.desc}>
