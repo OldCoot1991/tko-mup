@@ -71,8 +71,16 @@ export default function Footer() {
               <h4 className={styles.colTitle}>Контакты</h4>
               <div className={styles.contactAction}>
                 <p className={styles.contactActionDesc}>
-                  У вас есть вопросы или вы хотите заключить договор?
+                  Для заключения договора на вывоз ТКО звоните:
                 </p>
+                <div className={styles.footerPhones}>
+                  <a href="tel:+79287062763" className={styles.footerPhone}>
+                    +7 928 706 27 63
+                  </a>
+                  <a href="tel:+79287092164" className={styles.footerPhone}>
+                    +7 928 709 21 64
+                  </a>
+                </div>
                 <a 
                   href="#contact" 
                   className={`btn-primary ${styles.contactBtn}`}

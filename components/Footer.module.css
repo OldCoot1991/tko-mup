@@ -124,6 +124,26 @@
   line-height: 1.5;
 }
 
+.footerPhones {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footerPhone {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f0f4f8;
+  text-decoration: none;
+  transition: color 0.2s, text-decoration 0.2s;
+  width: fit-content;
+}
+
+.footerPhone:hover {
+  color: #2ecc71;
+  text-decoration: underline;
+}
+
 .contactBtn {
   font-size: 13px;
   padding: 10px 20px;

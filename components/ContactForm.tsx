@@ -76,12 +76,11 @@ export default function ContactForm() {
           </div>
           <h2 className="section-title">Свяжитесь с нами</h2>
           <p className="section-subtitle">
-            Для вопросов, обращений и заключения договора — напишите нам на электронную почту.
-            Мы отвечаем в рабочие дни в течение 3 рабочих дней.
+            Для вопросов, обращений и заключения договора — напишите нам на почту или позвоните по номерам договорного отдела.
           </p>
         </div>
 
-        <div className={styles.grid}>
+        <div className={styles.heroGrid}>
           {/* Email — hero card */}
           <a
             href="mailto:mup.ekotehprom@yandex.ru"
@@ -108,6 +107,38 @@ export default function ContactForm() {
               </svg>
             </div>
           </a>
+
+          {/* Phone — hero card */}
+          <div className={styles.phoneCard}>
+            <div className={styles.phoneCardLeft}>
+              <div className={styles.phoneIcon}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ecc71" strokeWidth="1.8">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <p className={styles.phoneLabel}>Заключение договоров на вывоз ТКО</p>
+                <div className={styles.phoneNumbersColumn}>
+                  <a href="tel:+79287062763" className={styles.phoneNumber}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ marginRight: '1px' }}>
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>+7 928 706 27 63</span>
+                  </a>
+                  <a href="tel:+79287092164" className={styles.phoneNumber}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ marginRight: '1px' }}>
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>+7 928 709 21 64</span>
+                  </a>
+                </div>
+                <p className={styles.phoneSub}>Звоните по указанным номерам для оформления договора</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.grid}>
 
           {/* Other contact items */}
           {contacts.filter(c => !c.isEmail).map((c) => (

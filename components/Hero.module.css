@@ -170,6 +170,76 @@
   color: #64748b;
 }
 
+.phoneBanner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(46, 204, 113, 0.06);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  border-radius: 12px;
+  margin-bottom: 36px;
+  animation: fade-in-up 0.6s ease 0.35s both;
+}
+
+.phoneBannerIcon {
+  width: 44px;
+  height: 44px;
+  background: rgba(46, 204, 113, 0.12);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.phoneBannerTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2ecc71;
+  margin-bottom: 2px;
+}
+
+.phoneBannerNumbers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.phoneLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(46, 204, 113, 0.08);
+  border: 1px solid rgba(46, 204, 113, 0.25);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f0f4f8;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  width: fit-content;
+}
+
+.phoneLink:hover {
+  background: rgba(46, 204, 113, 0.18);
+  border-color: rgba(46, 204, 113, 0.55);
+  color: #2ecc71;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.15);
+}
+
+.phoneLink svg {
+  color: #2ecc71;
+  transition: transform 0.2s;
+}
+
+.phoneLink:hover svg {
+  transform: scale(1.1);
+}
+
 .actions {
   display: flex;
   align-items: center;

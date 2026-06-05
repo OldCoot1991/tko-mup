@@ -25,16 +25,24 @@
   margin-bottom: 40px;
 }
 
-/* Contact grid: email card spans full width, then 3 cols */
+/* Contact grid: 3 cols */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
 
-/* ── Email hero card (spans all 3 columns) ── */
-.emailCard {
-  grid-column: 1 / -1;
+/* ── Hero grid (Email & Phone cards) ── */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* ── Email & Phone hero cards ── */
+.emailCard,
+.phoneCard {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,13 +52,13 @@
   border: 1.5px solid rgba(46, 204, 113, 0.3);
   border-radius: 18px;
   text-decoration: none;
-  cursor: pointer;
   transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
   position: relative;
   overflow: hidden;
 }
 
-.emailCard::before {
+.emailCard::before,
+.phoneCard::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -58,26 +66,35 @@
   opacity: 0;
   transition: opacity 0.25s;
   border-radius: inherit;
+  pointer-events: none;
 }
 
-.emailCard:hover {
+.emailCard:hover,
+.phoneCard:hover {
   border-color: rgba(46, 204, 113, 0.55);
   box-shadow: 0 8px 36px rgba(46, 204, 113, 0.18);
   transform: translateY(-2px);
 }
 
-.emailCard:hover::before { opacity: 1; }
-.emailCard:active { transform: translateY(0) scale(0.99); }
+.emailCard:hover::before,
+.phoneCard:hover::before { opacity: 1; }
 
-.emailCardLeft {
+.emailCard:active,
+.phoneCard:active { transform: translateY(0) scale(0.99); }
+
+.emailCardLeft,
+.phoneCardLeft {
   display: flex;
   align-items: center;
   gap: 18px;
   flex: 1;
   min-width: 0;
+  position: relative;
+  z-index: 2;
 }
 
-.emailIcon {
+.emailIcon,
+.phoneIcon {
   width: 56px; height: 56px;
   background: rgba(46, 204, 113, 0.12);
   border: 1px solid rgba(46, 204, 113, 0.25);
@@ -87,13 +104,16 @@
   justify-content: center;
   flex-shrink: 0;
   transition: background 0.2s;
+  color: #2ecc71;
 }
 
-.emailCard:hover .emailIcon {
+.emailCard:hover .emailIcon,
+.phoneCard:hover .phoneIcon {
   background: rgba(46, 204, 113, 0.2);
 }
 
-.emailLabel {
+.emailLabel,
+.phoneLabel {
   font-size: 11px;
   font-weight: 700;
   color: #2ecc71;
@@ -112,7 +132,50 @@
   text-overflow: ellipsis;
 }
 
-.emailSub {
+.phoneNumbersColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.phoneNumber {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(46, 204, 113, 0.08);
+  border: 1px solid rgba(46, 204, 113, 0.25);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f0f4f8;
+  letter-spacing: -0.1px;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  width: fit-content;
+}
+
+.phoneNumber:hover {
+  background: rgba(46, 204, 113, 0.18);
+  border-color: rgba(46, 204, 113, 0.55);
+  color: #2ecc71;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.15);
+}
+
+.phoneNumber svg {
+  color: #2ecc71;
+  transition: transform 0.2s;
+}
+
+.phoneNumber:hover svg {
+  transform: scale(1.1);
+}
+
+.emailSub,
+.phoneSub {
   font-size: 12px;
   color: #64748b;
   margin-top: 3px;
@@ -193,26 +256,31 @@
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .section { padding: 70px 0; }
-  .emailValue { font-size: 16px; }
+  .emailValue,
+  .phoneNumber { font-size: 16px; }
 }
 
 @media (max-width: 700px) {
   .grid { grid-template-columns: 1fr; }
-  .emailCard { grid-column: 1 / -1; }
-  .emailValue { font-size: 15px; }
+  .heroGrid { grid-template-columns: 1fr; }
+  .emailValue,
+  .phoneNumber { font-size: 15px; }
   .emailAction { padding: 10px 16px; font-size: 13px; }
 }
 
 @media (max-width: 540px) {
   .section { padding: 56px 0; }
-  .emailCard {
+  .emailCard,
+  .phoneCard {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
     padding: 20px;
   }
-  .emailCardLeft { width: 100%; }
+  .emailCardLeft,
+  .phoneCardLeft { width: 100%; }
   .emailAction { width: 100%; justify-content: center; }
-  .emailValue { font-size: 14px; }
+  .emailValue,
+  .phoneNumber { font-size: 14px; }
   .grid { gap: 10px; }
 }
