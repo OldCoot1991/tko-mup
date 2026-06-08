@@ -235,7 +235,7 @@ export default function Tariffs() {
           <p>
             <strong>Важно:</strong> Тарифы носят справочный характер. Окончательный расчёт производится
             по заключённому договору. По вопросам расчёта обратитесь по электронной почте:{" "}
-            <a href="mailto:mup.ekotehprom@yandex.ru">mup.ekotehprom@yandex.ru</a>
+            <a href="mailto:dogovor@ecotech07.ru">dogovor@ecotech07.ru</a>
           </p>
         </div>
       </div>

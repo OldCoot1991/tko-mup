@@ -11,11 +11,11 @@ const contacts = [
         <polyline points="22,6 12,13 2,6"/>
       </svg>
     ),
-    label: "Электронная почта",
-    value: "mup.ekotehprom@yandex.ru",
-    href: "mailto:mup.ekotehprom@yandex.ru",
-    sub: "Ответ в течение 3 рабочих дней",
-    isEmail: true,
+    label: "Почта договорного отдела",
+    value: "dogovor@ecotech07.ru",
+    href: "mailto:dogovor@ecotech07.ru",
+    sub: "Для оформления и сопровождения договоров",
+    isEmail: false,
   },
   {
     id: "address",
@@ -76,14 +76,14 @@ export default function ContactForm() {
           </div>
           <h2 className="section-title">Свяжитесь с нами</h2>
           <p className="section-subtitle">
-            Для вопросов, обращений и заключения договора — напишите нам на почту или позвоните по номерам договорного отдела.
+            Для вопросов, обращений и заключения договора — напишите в договорной отдел или позвоните по указанным номерам.
           </p>
         </div>
 
         <div className={styles.heroGrid}>
           {/* Email — hero card */}
           <a
-            href="mailto:mup.ekotehprom@yandex.ru"
+            href="mailto:dogovor@ecotech07.ru"
             className={styles.emailCard}
           >
             <div className={styles.emailCardLeft}>
@@ -94,9 +94,9 @@ export default function ContactForm() {
                 </svg>
               </div>
               <div>
-                <p className={styles.emailLabel}>Электронная почта</p>
-                <p className={styles.emailValue}>mup.ekotehprom@yandex.ru</p>
-                <p className={styles.emailSub}>Ответ в течение 3 рабочих дней</p>
+                <p className={styles.emailLabel}>Почта договорного отдела</p>
+                <p className={styles.emailValue}>dogovor@ecotech07.ru</p>
+                <p className={styles.emailSub}>Для оформления и сопровождения договоров</p>
               </div>
             </div>
             <div className={styles.emailAction}>
@@ -130,6 +130,12 @@ export default function ContactForm() {
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                     <span>+7 928 709 21 64</span>
+                  </a>
+                  <a href="tel:+79896400523" className={styles.phoneNumber}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ marginRight: '1px' }}>
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>Горячая линия: 8 989 640 05 23</span>
                   </a>
                 </div>
                 <p className={styles.phoneSub}>Звоните по указанным номерам для оформления договора</p>

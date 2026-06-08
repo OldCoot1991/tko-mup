@@ -19,14 +19,14 @@ export async function POST(request: NextRequest) {
       port: 465,
       secure: true,
       auth: {
-        user: process.env.SMTP_USER || "mup.ekotehprom@yandex.ru",
+        user: process.env.SMTP_USER || "dogovor@ecotech07.ru",
         pass: process.env.SMTP_PASS || "",
       },
     });
 
     const mailOptions = {
-      from: `"Сайт МУП Экотехпром" <${process.env.SMTP_USER || "mup.ekotehprom@yandex.ru"}>`,
-      to: "mup.ekotehprom@yandex.ru",
+      from: `"Сайт МУП Экотехпром" <${process.env.SMTP_USER || "dogovor@ecotech07.ru"}>`,
+      to: "dogovor@ecotech07.ru",
       replyTo: email,
       subject: `[Обращение с сайта] ${type} от ${name}`,
       html: `

@@ -221,6 +221,11 @@
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   width: fit-content;
+  max-width: 100%;
+}
+
+.phoneLink span {
+  overflow-wrap: anywhere;
 }
 
 .phoneLink:hover {
@@ -365,6 +370,8 @@
   .actions { flex-direction: column; align-items: stretch; }
   .actions button, .actions a { width: 100%; justify-content: center; }
   .certBanner { padding: 12px 14px; gap: 12px; }
+  .phoneBanner { align-items: flex-start; padding: 12px 14px; gap: 12px; }
+  .phoneLink { width: 100%; }
 }
 
 @media (max-width: 420px) {
