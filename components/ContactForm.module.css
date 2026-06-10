@@ -82,6 +82,30 @@
 .emailCard:active,
 .phoneCard:active { transform: translateY(0) scale(0.99); }
 
+.infoCard {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.infoContactRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.infoContactRow + .infoContactRow {
+  margin-top: 28px;
+}
+
+.infoEmailBody {
+  min-width: 0;
+  flex: 1;
+}
+
 .emailCardLeft,
 .phoneCardLeft {
   display: flex;
@@ -132,41 +156,10 @@
   text-overflow: ellipsis;
 }
 
-.phoneNumbersColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 8px;
-  margin-bottom: 4px;
-}
-
-.contractContent {
-  min-width: 0;
-}
-
-.contractContactGroup {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-
 .contractContactLinks {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.contractSideIcon {
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: #2ecc71;
-  background: rgba(46, 204, 113, 0.12);
-  border: 1px solid rgba(46, 204, 113, 0.25);
-  border-radius: 10px;
 }
 
 .phoneNumber {
@@ -190,23 +183,6 @@
   overflow-wrap: anywhere;
 }
 
-.contractEmail {
-  align-items: center;
-}
-
-.contractEmailText {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.contractEmailLabel {
-  font-size: 11px;
-  color: #94a3b8;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
 .phoneNumber:hover {
   background: rgba(46, 204, 113, 0.18);
   border-color: rgba(46, 204, 113, 0.55);
@@ -215,8 +191,7 @@
   box-shadow: 0 4px 12px rgba(46, 204, 113, 0.15);
 }
 
-.emailSub,
-.phoneSub {
+.emailSub {
   font-size: 12px;
   color: #64748b;
   margin-top: 3px;
@@ -320,6 +295,13 @@
   }
   .emailCardLeft,
   .phoneCardLeft { width: 100%; }
+  .infoContactRow {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .infoContactRow:last-child {
+    flex-wrap: wrap;
+  }
   .emailAction { width: 100%; justify-content: center; }
   .emailValue,
   .phoneNumber { font-size: 14px; }

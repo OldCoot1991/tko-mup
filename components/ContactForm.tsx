@@ -68,70 +68,81 @@ export default function ContactForm() {
 
         <div className={styles.heroGrid}>
           {/* Email — hero card */}
-          <a
-            href="mailto:info@ecotech07.ru"
-            className={styles.emailCard}
-          >
-            <div className={styles.emailCardLeft}>
+          <div className={`${styles.emailCard} ${styles.infoCard}`}>
+            <div className={styles.infoContactRow}>
+              <div className={styles.emailIcon}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ecc71" strokeWidth="1.8">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <p className={styles.emailLabel}>Горячая линия</p>
+                <a href="tel:+79896400523" className={styles.phoneNumber}>
+                  <span>+7 989 640 05 23</span>
+                </a>
+              </div>
+            </div>
+            <div className={styles.infoContactRow}>
               <div className={styles.emailIcon}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ecc71" strokeWidth="1.8">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <polyline points="22,6 12,13 2,6"/>
                 </svg>
               </div>
-              <div>
+              <div className={styles.infoEmailBody}>
                 <p className={styles.emailLabel}>Электронная почта</p>
                 <p className={styles.emailValue}>info@ecotech07.ru</p>
                 <p className={styles.emailSub}>Для общих вопросов и обращений</p>
               </div>
+              <a href="mailto:info@ecotech07.ru" className={styles.emailAction}>
+                <span>Написать</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </a>
             </div>
-            <div className={styles.emailAction}>
-              <span>Написать</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <line x1="22" y1="2" x2="11" y2="13"/>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
-            </div>
-          </a>
+          </div>
 
           {/* Phone — hero card */}
-          <div className={styles.phoneCard}>
-            <div className={styles.phoneCardLeft}>
-              <div className={styles.contractContent}>
-                <p className={styles.phoneLabel}>Заключение договоров на вывоз ТКО</p>
-                <div className={styles.phoneNumbersColumn}>
-                  <div className={styles.contractContactGroup}>
-                    <div className={styles.contractSideIcon}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                      </svg>
-                    </div>
-                    <div className={styles.contractContactLinks}>
-                      <a href="tel:+79287062763" className={styles.phoneNumber}>
-                        <span>+7 928 706 27 63</span>
-                      </a>
-                      <a href="tel:+79287092164" className={styles.phoneNumber}>
-                        <span>+7 928 709 21 64</span>
-                      </a>
-                    </div>
-                  </div>
-                  <div className={styles.contractContactGroup}>
-                    <div className={styles.contractSideIcon}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                      </svg>
-                    </div>
-                    <a href="mailto:dogovor@ecotech07.ru" className={`${styles.phoneNumber} ${styles.contractEmail}`}>
-                      <span className={styles.contractEmailText}>
-                        <span className={styles.contractEmailLabel}>Почта договорного отдела</span>
-                        <span>dogovor@ecotech07.ru</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                <p className={styles.phoneSub}>Звоните по указанным номерам для оформления договора</p>
+          <div className={`${styles.phoneCard} ${styles.infoCard}`}>
+            <div className={styles.infoContactRow}>
+              <div className={styles.emailIcon}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ecc71" strokeWidth="1.8">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
               </div>
+              <div className={styles.infoEmailBody}>
+                <p className={styles.phoneLabel}>Заключение договоров на вывоз ТКО</p>
+                <div className={styles.contractContactLinks}>
+                  <a href="tel:+79287062763" className={styles.phoneNumber}>
+                    <span>+7 928 706 27 63</span>
+                  </a>
+                  <a href="tel:+79287092164" className={styles.phoneNumber}>
+                    <span>+7 928 709 21 64</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className={styles.infoContactRow}>
+              <div className={styles.emailIcon}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2ecc71" strokeWidth="1.8">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div className={styles.infoEmailBody}>
+                <p className={styles.emailLabel}>Почта договорного отдела</p>
+                <p className={styles.emailValue}>dogovor@ecotech07.ru</p>
+                <p className={styles.emailSub}>Для оформления и сопровождения договоров</p>
+              </div>
+              <a href="mailto:dogovor@ecotech07.ru" className={styles.emailAction}>
+                <span>Написать</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>

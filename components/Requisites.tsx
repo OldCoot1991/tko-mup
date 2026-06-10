@@ -12,8 +12,8 @@ const requisites = [
   { label: "Корреспондентский счёт (К/с)", value: "30101810907020000615" },
   { label: "БИК", value: "040702615" },
   { label: "Банк", value: "Ставропольское отделение №5230 ПАО Сбербанк", wide: true },
-  { label: "Почта договорного отдела", value: "info@ecotech07.ru" },
-  { label: "Горячая линия", value: "8 989 640 05 23" },
+  { label: "Электронная почта", value: "info@ecotech07.ru" },
+  { label: "Горячая линия", value: "+7 989 640 05 23" },
 ];
 
 export default function Requisites() {
