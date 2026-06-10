@@ -58,9 +58,9 @@ export default function Header() {
             </svg>
             <span>Горячая линия: 8 989 640 05 23</span>
           </a>
-          <a href="mailto:dogovor@ecotech07.ru" className={styles.hotline}>
+          <a href="mailto:info@ecotech07.ru" className={styles.hotline}>
             <span className={styles.hotlineDot} />
-            <span>dogovor@ecotech07.ru</span>
+            <span>Почта: info@ecotech07.ru</span>
           </a>
           <button className="btn-primary" onClick={() => scrollTo("#contact")}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

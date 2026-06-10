@@ -114,8 +114,16 @@
 .contactAction {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   align-items: flex-start;
+  border-left: 3px solid #ef4444;
+  padding-left: 14px;
+}
+
+.contactGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .contactActionDesc {

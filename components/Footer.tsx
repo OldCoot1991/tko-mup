@@ -70,6 +70,18 @@ export default function Footer() {
             <div className={`${styles.col} ${styles.hideOnMobile}`}>
               <h4 className={styles.colTitle}>Контакты</h4>
               <div className={styles.contactAction}>
+                <div className={styles.contactGroup}>
+                  <p className={styles.contactActionDesc}>Горячая линия</p>
+                  <a href="tel:+79896400523" className={styles.footerPhone}>
+                    +7 989 640 05 23
+                  </a>
+                </div>
+                <div className={styles.contactGroup}>
+                  <p className={styles.contactActionDesc}>Электронная почта</p>
+                  <a href="mailto:info@ecotech07.ru" className={styles.footerPhone}>
+                    info@ecotech07.ru
+                  </a>
+                </div>
                 <p className={styles.contactActionDesc}>
                   Для заключения договора на вывоз ТКО:
                 </p>
@@ -79,9 +91,6 @@ export default function Footer() {
                   </a>
                   <a href="tel:+79287092164" className={styles.footerPhone}>
                     +7 928 709 21 64
-                  </a>
-                  <a href="tel:+79896400523" className={styles.footerPhone}>
-                    Горячая линия: 8 989 640 05 23
                   </a>
                   <a href="mailto:dogovor@ecotech07.ru" className={styles.footerPhone}>
                     dogovor@ecotech07.ru
