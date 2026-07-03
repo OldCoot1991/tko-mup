@@ -13,7 +13,7 @@ const requisites = [
   { label: "БИК", value: "040702615" },
   { label: "Банк", value: "Ставропольское отделение №5230 ПАО Сбербанк", wide: true },
   { label: "Электронная почта", value: "info@ecotech07.ru" },
-  { label: "Горячая линия", value: "+7 989 640 05 23" },
+  { label: "Горячая линия", value: "+7 (866) 222-92-00" },
 ];
 
 export default function Requisites() {

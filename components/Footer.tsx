@@ -72,8 +72,8 @@ export default function Footer() {
               <div className={styles.contactAction}>
                 <div className={styles.contactGroup}>
                   <p className={styles.contactActionDesc}>Горячая линия</p>
-                  <a href="tel:+79896400523" className={styles.footerPhone}>
-                    +7 989 640 05 23
+                  <a href="tel:+78662229200" className={styles.footerPhone}>
+                    +7 (866) 222-92-00
                   </a>
                 </div>
                 <div className={styles.contactGroup}>

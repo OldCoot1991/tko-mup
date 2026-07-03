@@ -77,8 +77,8 @@ export default function ContactForm() {
               </div>
               <div>
                 <p className={styles.emailLabel}>Горячая линия</p>
-                <a href="tel:+79896400523" className={styles.phoneNumber}>
-                  <span>+7 989 640 05 23</span>
+                <a href="tel:+78662229200" className={styles.phoneNumber}>
+                  <span>+7 (866) 222-92-00</span>
                 </a>
               </div>
             </div>

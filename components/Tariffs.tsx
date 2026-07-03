@@ -57,7 +57,7 @@ export default function Tariffs() {
                   <thead>
                     <tr>
                       <th>Зона</th>
-                      <th>с 01.01.2026 по 30.09.2026</th>
+                      <th>с 15.05.2026 по 30.09.2026</th>
                       <th>с 01.10.2026 по 31.12.2026</th>
                     </tr>
                   </thead>
@@ -86,7 +86,7 @@ export default function Tariffs() {
             <div className={styles.block}>
               <h3 className={styles.blockTitle}>
                 Нормативы накопления ТКО / Плата на 1 человека в месяц по зонам
-                <span className={styles.blockUnit}>(руб.) &mdash; с 01.01.2026 по 30.09.2026</span>
+                <span className={styles.blockUnit}>(руб.) &mdash; с 15.05.2026 по 30.09.2026</span>
               </h3>
               <div className={styles.tableWrap}>
                 <table className={styles.table}>
@@ -172,7 +172,7 @@ export default function Tariffs() {
                   <thead>
                     <tr>
                       <th>Зона</th>
-                      <th>с 01.01.2026 по 30.09.2026</th>
+                      <th>с 15.05.2026 по 30.09.2026</th>
                       <th>с 01.10.2026 по 31.12.2026</th>
                     </tr>
                   </thead>
@@ -208,7 +208,7 @@ export default function Tariffs() {
                   <thead>
                     <tr>
                       <th>Объект</th>
-                      <th>с 01.01.2026 по 30.09.2026</th>
+                      <th>с 15.05.2026 по 30.09.2026</th>
                       <th>с 01.10.2026 по 31.12.2026</th>
                     </tr>
                   </thead>
